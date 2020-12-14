@@ -5,7 +5,7 @@ from en_us.en_bp import en_bp
 
 
 app = Flask(__name__)
-app.register_blueprint(pt_bp, url_prefix='/pt-br')
+app.register_blueprint(pt_bp, url_prefix='/')
 app.register_blueprint(es_bp, url_prefix='/es-mx')
 app.register_blueprint(en_bp, url_prefix='/en-us')
 
