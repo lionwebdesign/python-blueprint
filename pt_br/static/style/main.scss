@@ -1,0 +1,112 @@
+$color-primario: #1f1f1f;//#111; 
+$color-secundario: #ff571f; 
+$color-destaque: #fff; 
+$dark: #111;
+$sombra-3d:  0 17px 65px 0 rgba(173, 173, 173, 0.35);
+$glass: rgba($color: #111, $alpha: 0.5);
+$desenfoque: blur(5px);
+
+//caracteristicas del header
+
+$header: $glass; // Color del header al cargar la pagina
+$header-texto: $color-destaque; //Color del texto del header
+$header-texto-hover: $color-secundario; //darken($header-texto, 15%);
+
+//caracteristicas del footer
+
+$footer: $dark;
+$footer-texto: $color-destaque; //white;
+
+$color-titulos: $color-destaque;
+$color-textos: darken($color-titulos, 15%);
+
+.titulo {
+  color: $color-titulos;
+}
+
+.texto {
+  color: $color-textos;
+}
+
+h1 {
+  font-size: 2.85rem !important;
+}
+
+h2 {
+  font-size: 2rem !important;
+}
+
+h3 {
+  font-size: 1.65rem !important;
+}
+
+h4 {
+  font-size: 1.45rem !important;
+}
+
+p {
+  font-size: 1.15rem !important;
+}
+
+$mobile-h1-font-size: 1.8rem !important;
+$mobile-h2-font-size: 1.8rem !important;
+$mobile-h3-font-size: 1.5rem !important;
+$mobile-h4-font-size: 1.25rem !important;
+$mobile-p-font-size: 1rem !important;
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: $mobile-h1-font-size;
+  }
+
+  h2 {
+    font-size: $mobile-h2-font-size;
+  }
+
+  h3 {
+    font-size: $mobile-h3-font-size;
+  }
+
+  h4 {
+    font-size: $mobile-h4-font-size;
+  }
+
+  p {
+    font-size: $mobile-p-font-size;
+  }
+}
+
+$larguraMaxTela: 1920px;
+
+@import './style-home.scss';
+@import './artigos.scss';
+@import './catalogo-artigos-style.scss';
+@import './catalogo-produtos-style.scss';
+
+
+body {
+  background-color: $color-primario;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+
+  &::-webkit-scrollbar {
+    width: 7.5px;
+    background-color: $color-primario;
+
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-secundario;
+  }
+
+  @import './header.scss';
+
+  main {
+    flex: 1 0 auto;
+    max-width: $larguraMaxTela;
+    margin: auto !important;
+  }
+
+  @import './footer.scss';
+
+}

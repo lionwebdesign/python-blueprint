@@ -1,0 +1,131 @@
+.entrada-principal {
+    //background-color: $dark;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), 
+    url(../media/dqaewbrvgfe.jpg);
+    background-size: cover;
+    background-position: center;
+    @media screen and (max-width: 992px) {
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), 
+    url(../media/black-and-gray-naked-motorcycle-1289512.jpg);
+    }
+    div.container {
+      .titulo {
+        color: $color-titulos;
+        font-weight: 800;
+        font-size: 4rem !important;
+        // text-decoration: underline;
+        span {
+          font-size: 0.675em;
+          font-weight: normal;
+          text-decoration: underline;
+        }
+        @media screen and (max-width: 600px) {
+          font-size: 2.5rem !important;
+        }
+      }
+      .texto {
+        color: $color-textos;
+        @media screen and (max-width: 600px) {
+          font-size: 1rem !important;
+        }
+      }
+    }
+  }
+
+  #home {
+    .nuevos-articulos {
+      .texto-nuevos-articulos {
+        .titulo {
+          font-weight: bold;
+          font-size: 3.25rem !important;
+          font-variant: small-caps;
+          @media screen and (max-width: 600px) {
+            font-size: 2rem !important;
+          }
+        }
+      }
+      .articulos-grid {
+        display: flex;
+        margin: auto;
+        width: 85%;
+        .card-articulo {
+          width: 33.33%;
+          margin: auto;
+          .card {
+            border-radius: 5px;
+            box-shadow: $sombra-3d;
+            .card-image {
+              height: 200px;
+              width: auto;
+              border-radius: 5px 5px 0 0;
+              img {
+                min-height: -webkit-fill-available;
+              }
+            }
+          }
+          @media screen and (max-width: 992px) {
+            width: 90%;
+            margin: auto;
+            .card {
+              .card-image {
+                height: 275px;
+                width: auto;
+                img {
+                  min-height: -webkit-fill-available;
+                }
+              }
+            }
+          }
+        }
+        @media screen and (max-width: 992px) {
+          flex-direction: column;
+        }
+      }
+    }
+
+    .articulos-destaque {
+      padding-top: 15px;
+      .texto-articulos-destaque {
+        margin-bottom: 45px;
+      }
+
+      .articulos-destaque-grid {
+        .articulo-destacado {
+          display: flex;
+          margin-bottom: 25px;
+          .texto-articulo-destacado {
+            width: 45%;
+            margin: auto;
+
+            .titulo {
+              font-weight: bold;
+              font-size: 3.25rem !important;
+              font-variant: small-caps;
+            }
+          }
+          .img-articulo-destacado {
+            width: 45%;
+            margin: auto;
+            img {
+              border-radius: 2px;
+            }
+          }
+          @media screen and (max-width: 992px) {
+            flex-direction: column;
+            .texto-articulo-destacado {
+              width: 95%;
+              margin: auto;
+            }
+            .img-articulo-destacado {
+              width: 95%;
+              margin: auto;
+            }
+          }
+        }
+      }
+    }
+  }
