@@ -1,6 +1,10 @@
 from flask import Flask, Blueprint, render_template
 
-portugues_bp = Blueprint("portugues_bp", __name__, template_folder= "templates")
+portugues_bp = Blueprint("portugues_bp", 
+                            __name__, 
+                            template_folder= "templates",
+                            static_folder="static",
+                            static_url_path="/portugues/static")
 
 @portugues_bp.route("/")
 def portugues():

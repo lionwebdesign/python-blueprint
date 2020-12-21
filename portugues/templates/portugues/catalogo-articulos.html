@@ -1,6 +1,29 @@
 {% extends "layout.html" %}
 {% block content %}
 
-catalogo articulos
+<main id="catalogo-artigos-main">
+
+  <ul id="slide-out" class="sidenav">
+    <header class="titulo">Data de Publicação</header>
+    <li><a href="#agosto-2020">Agosto 2020</a></li>
+  </ul>
+  
+   
+  <div class="articulos">
+
+    <a href="#" data-target="slide-out" class="sidenav-trigger titulo"><i class="material-icons">search</i> Data de Publicação</a>
+
+    <section class="row" id="agosto-2020">
+      <header>
+        <h2 class="titulo">Agosto 2020</h2>
+      </header>
+
+    </section>
+  </div>
+</main>
+
+<section class="row publicidad">
+  <div class="container"></div>
+</section>
 
 {% endblock %}
