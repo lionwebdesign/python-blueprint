@@ -1,0 +1,62 @@
+<header class="navbar-fixed" id="header">
+    <nav class="" role="navigation" id="nav-bar">
+        <div class="nav-wrapper container">
+            <!-- <div class="brand-logo"> -->
+            <a class="brand-logo" id="" href="/" class="brand-logo">
+                <img src="{{ url_for('static', filename = 'media/path12.png') }}"
+                    class="img-logo responsive-img" id="header-img" />
+            </a>
+
+            <!-- </div> -->
+
+            <!-- ---Desktop navbar--- -->
+            <ul class="right hide-on-med-and-down">
+                <li>
+                    <a class="boton-menu" href="/">Home</a>
+                </li>
+                <li>
+                    <!-- Dropdown Trigger -->
+                    <a class='dropdown-trigger' href='#' data-target='dropdown1'>Produtos</a>
+
+                    <!-- Dropdown Structure -->
+                    <ul id='dropdown1' class='dropdown-content'>
+                        <li><a href="{{ url_for('portugues_bp.productos') }}">Todos os produtos</a></li>
+                        <li><a href="#!">Ferramentas</a></li>
+                        <li><a href="#!">Peças e Acessórios</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="boton-menu" href="{{ url_for('portugues_bp.catalogo_articulos') }}">Outros Artigos</a>
+                </li>
+                <li>
+                    <a class="boton-menu" href="#contact-us">Contato</a>
+                </li>
+            </ul>
+
+            <!-- ---Mobile navbar--- -->
+            <ul id="nav-mobile" class="sidenav">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <!-- Dropdown Trigger -->
+                    <a class='dropdown-trigger' href='#' data-target='dropdown2'>Produtos</a>
+
+                    <!-- Dropdown Structure -->
+                    <ul id='dropdown2' class='dropdown-content'>
+                        <li><a href="{{ url_for('portugues_bp.productos') }}">Todos os produtos</a></li>
+                        <li><a href="#!">Ferramentas</a></li>
+                        <li><a href="#!">Peças e Acessórios</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="{{ url_for('portugues_bp.catalogo_articulos') }}">Outros Artigos</a>
+                </li>
+                <li>
+                    <a href="#contact-us">Contato</a>
+                </li>
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+</header>

@@ -1,0 +1,127 @@
+#a-primeira-busqueda-main {
+  margin-top: 150px !important;
+    display: flex !important;
+    width: 100%;
+  
+    article {
+      width: 70%;
+      .titulo-articulo {
+        .titulo {
+          font-weight: bold;
+          font-size: 3.25rem !important;
+          font-variant: small-caps;
+        }
+      }
+      .imagen-principal {
+        width: 70%;
+        margin: auto;
+        margin-top: 50px;
+        img {
+          width: 100%;
+          height: auto;
+          box-shadow: 0 10px 30px 0 rgba(5, 24, 51, 0.35);
+          border-radius: 2px;
+        }
+        div.video-container {
+          box-shadow: 0 10px 30px 0 rgba(5, 24, 51, 0.35);
+            iframe {
+              box-shadow: 0 10px 30px 0 rgba(5, 24, 51, 0.35);
+            }
+        }
+      }
+      .contenido-articulo {
+        width: 90%;
+        margin: auto;
+      }
+  
+      .divididos {
+        display: flex;
+        .texto-y-imagen {
+          width: 55%;
+          //margin: auto;
+        }
+        .imagen-y-texto {
+          width: 35%;
+          height: auto;
+          margin: auto;
+          border-radius: 2px;
+          //box-shadow: 0 10px 30px 0 rgba(5, 24, 51, 0.35);
+          img {
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 10px 30px 0 rgba(5, 24, 51, 0.35);
+          }
+        }
+        @media screen and (max-width: 992px) {
+          flex-direction: column;
+          .texto-y-imagen {
+            width: 100%;
+            //margin: auto;
+          }
+          .imagen-y-texto {
+            width: 65%;
+            margin: auto;
+          }
+        }
+      }
+    }
+  
+    .info-autor {
+      width: 30%;
+      //height: 100%;
+      border-radius: 2px;
+      div.container {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        padding: 50px;
+        font-size: 20px;
+        background-color: $glass;
+        box-shadow: $sombra-3d;
+      
+        img {
+          width: 100%;
+          height: auto;
+          margin: auto;
+          border-radius: 50%;
+        }
+        .titulo {
+          font-weight: bold;
+          font-variant: small-caps;
+        }
+        p {
+          font-size: 0.95rem !important;
+          span {
+            text-decoration: none;
+            font-size: 0.95rem;
+            s {
+              text-decoration: underline;
+              font-size: 0.80rem;
+            }
+          }
+        }
+      }
+    }
+  
+    @media screen and (max-width: 992px) {
+      flex-direction: column;
+      width: 100%;
+  
+      article.articulo {
+        width: 100%;
+        .titulo-articulo {
+          .titulo {
+            font-weight: bold;
+            font-size: 2.25rem !important;
+            font-variant: small-caps;
+          }
+        }
+      }
+  
+      .info-autor {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  
